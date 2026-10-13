@@ -29,7 +29,7 @@ import heroPoster from "@/assets/hero-poster.jpg";
 const heroVideoUrl = "/hero-loop.mp4";
 import therapistPhoto from "@/assets/therapist.jpg";
 
-const THERAPIST_NAME = "Mariana Lopes";
+const THERAPIST_NAME = "Alice";
 // Trocar pelo domínio do prospecto (ou pela URL da Vercel) — usado nas prévias de link.
 const SITE_URL = "https://modelo-psico-4.vercel.app/";
 // Recorte 1200x630 da foto de "Sobre mim" (public/og-image.jpg) usado nas prévias de link.
@@ -38,7 +38,7 @@ const OG_IMAGE_URL = `${SITE_URL}og-image.jpg`;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mariana Lopes · Psicanalista Clínica | Atendimento online" },
+      { title: "Alice · Psicanalista Clínica | Atendimento online" },
       {
         name: "description",
         content:
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Mariana Lopes · Psicanalista Clínica",
+        content: "Alice · Psicanalista Clínica",
       },
       {
         property: "og:description",
@@ -55,14 +55,14 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:site_name", content: "Mariana Lopes · Psicanalista Clínica" },
+      { property: "og:site_name", content: "Alice · Psicanalista Clínica" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: OG_IMAGE_URL },
       { property: "og:image:secure_url", content: OG_IMAGE_URL },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Mariana Lopes, psicanalista clínica" },
+      { property: "og:image:alt", content: "Alice, psicanalista clínica" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE_URL },
     ],
@@ -545,7 +545,7 @@ function Index() {
               </p>
               <div className="mt-5 flex gap-3">
                 <a
-                  href="https://instagram.com/marianalopes.psi"
+                  href="https://instagram.com/alice.psi"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -554,7 +554,7 @@ function Index() {
                   <Instagram className="h-4 w-4" aria-hidden />
                 </a>
                 <a
-                  href="https://linkedin.com/in/marianalopes-psi"
+                  href="https://linkedin.com/in/alice-psi"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
