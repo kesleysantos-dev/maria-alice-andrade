@@ -8,6 +8,8 @@ import {
   Instagram,
   Leaf,
   Linkedin,
+  Mail,
+  MapPin,
   Menu,
   MessageCircle,
   Moon,
@@ -31,6 +33,10 @@ import therapistPhoto from "@/assets/therapist.jpg";
 
 const THERAPIST_NAME = "Maria Alice Andrade";
 const THERAPIST_TITLE = "Psicologia e Psicanálise Clínica";
+const THERAPIST_CRP = "08/03550";
+const THERAPIST_EMAIL = "m.alice.andrade@hotmail.com";
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Rua+Santos+Dumont,+3472,+Maring%C3%A1+-+PR,+87013-050";
 // Trocar pelo domínio do prospecto (ou pela URL da Vercel) — usado nas prévias de link.
 const SITE_URL = "https://modelo-psico-4.vercel.app/";
 // Recorte 1200x630 da foto de "Sobre mim" (public/og-image.jpg) usado nas prévias de link.
@@ -39,7 +45,7 @@ const OG_IMAGE_URL = `${SITE_URL}og-image.jpg`;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maria Alice Andrade · Psicologia e Psicanálise Clínica | Atendimento online" },
+      { title: "Maria Alice Andrade · Psicologia e Psicanálise Clínica | Atendimento online e presencial" },
       {
         name: "description",
         content:
@@ -52,7 +58,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Um espaço seguro para reencontrar seu equilíbrio emocional. Terapia online com escuta humanizada.",
+          "Um espaço seguro para reencontrar seu equilíbrio emocional. Terapia online e presencial, com escuta humanizada.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
@@ -126,14 +132,14 @@ const STEPS = [
   {
     icon: CalendarHeart,
     title: "3. Início das sessões",
-    text: "Agendamos o primeiro encontro online, no horário que caiba na sua rotina.",
+    text: "Agendamos o primeiro encontro, online ou presencial, no horário que caiba na sua rotina.",
   },
 ];
 
 const FAQ = [
   {
-    q: "Como funcionam as sessões online?",
-    a: "O atendimento é 100% online, por videochamada em plataforma segura, com escuta atenta e a mesma profundidade de uma sessão presencial. Você só precisa de um lugar reservado e uma boa conexão de internet.",
+    q: "As sessões são online ou presenciais?",
+    a: "Você pode escolher. O atendimento presencial acontece no consultório em Maringá, e o online é feito por videochamada em plataforma segura, com a mesma escuta atenta e profundidade. Para as sessões online, você só precisa de um lugar reservado e uma boa conexão de internet.",
   },
   {
     q: "Quanto tempo dura cada sessão e qual a frequência?",
@@ -332,7 +338,7 @@ function Index() {
               <p className="eyebrow text-background/80">
                 Psicóloga e psicanalista clínica
                 <br />
-                Atendimento Online
+                Atendimento online e presencial
               </p>
               <h1 className="mt-5 font-display text-4xl leading-[1.1] text-background sm:text-6xl">
                 Um espaço seguro para você reencontrar seu equilíbrio emocional
@@ -367,6 +373,18 @@ function Index() {
                 height={1352}
                 className="w-full rounded-[2rem] object-cover shadow-lift"
               />
+              <div className="absolute -bottom-6 right-4 flex items-center gap-3.5 rounded-2xl border border-gold/50 bg-card/95 py-3 pl-4 pr-5 shadow-soft backdrop-blur-sm sm:right-6">
+                <Monogram className="h-8 w-8 bg-gold" />
+                <span className="h-9 w-px bg-gold/50" aria-hidden />
+                <span className="flex flex-col">
+                  <span className="text-[0.625rem] uppercase leading-none tracking-[0.22em] text-muted-foreground">
+                    Psicóloga · CRP
+                  </span>
+                  <span className="mt-1.5 font-display text-xl leading-none text-primary lining-nums">
+                    {THERAPIST_CRP}
+                  </span>
+                </span>
+              </div>
             </div>
 
             <div data-reveal="right">
@@ -389,7 +407,7 @@ function Index() {
                   Áreas de acompanhamento: Angústia, ansiedade, sobrecarga mental, questões de
                   autoimagem e fases de mudança.
                 </p>
-                <p>📍Atendimentos Online.</p>
+                <p>📍Atendimento online e presencial.</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-6">
                 {[
@@ -547,8 +565,30 @@ function Index() {
                 </span>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
-                Atendimento online para todo o Brasil.
+                Atendimento presencial em Maringá e online para todo o Brasil.
               </p>
+              <address className="mt-5 space-y-3 text-sm not-italic text-muted-foreground">
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2.5 transition-colors hover:text-primary"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+                  <span>
+                    Rua Santos Dumont, 3472 · Sala 302 · 3º andar
+                    <br />
+                    Bandeirantes · 87013-050 · Maringá – PR
+                  </span>
+                </a>
+                <a
+                  href={`mailto:${THERAPIST_EMAIL}`}
+                  className="flex items-center gap-2.5 transition-colors hover:text-primary"
+                >
+                  <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                  {THERAPIST_EMAIL}
+                </a>
+              </address>
               <div className="mt-5 flex gap-3">
                 <a
                   href="https://instagram.com/mariaaliceandrade.psi"
