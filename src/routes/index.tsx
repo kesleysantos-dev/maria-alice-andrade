@@ -373,14 +373,14 @@ function Index() {
                 height={1352}
                 className="w-full rounded-[2rem] object-cover shadow-lift"
               />
-              <div className="absolute -bottom-6 right-4 flex items-center gap-3.5 rounded-2xl border border-gold/50 bg-card/95 py-3 pl-4 pr-5 shadow-soft backdrop-blur-sm sm:right-6">
-                <Monogram className="h-8 w-8 bg-gold" />
-                <span className="h-9 w-px bg-gold/50" aria-hidden />
+              <div className="absolute -bottom-8 right-4 flex items-center gap-4 rounded-2xl border border-gold/50 bg-card/95 py-4 pl-5 pr-6 shadow-soft backdrop-blur-sm sm:right-6">
+                <Monogram className="h-10 w-10 bg-gold" />
+                <span className="h-12 w-px bg-gold/50" aria-hidden />
                 <span className="flex flex-col">
-                  <span className="text-[0.625rem] uppercase leading-none tracking-[0.22em] text-muted-foreground">
+                  <span className="text-xs uppercase leading-none tracking-[0.2em] text-muted-foreground">
                     Psicóloga · CRP
                   </span>
-                  <span className="mt-1.5 font-display text-xl leading-none text-primary lining-nums">
+                  <span className="mt-2 font-display text-[1.75rem] font-semibold leading-none text-primary lining-nums">
                     {THERAPIST_CRP}
                   </span>
                 </span>
