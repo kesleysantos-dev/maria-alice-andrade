@@ -11,7 +11,6 @@ import {
   Menu,
   MessageCircle,
   Moon,
-  ShieldCheck,
   Sparkles,
   Users,
 } from "lucide-react";
@@ -23,6 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Monogram } from "@/components/monogram";
 import { ScreeningModal } from "@/components/screening-modal";
 import heroPoster from "@/assets/hero-poster.jpg";
 
@@ -30,6 +30,7 @@ const heroVideoUrl = "/hero-loop.mp4";
 import therapistPhoto from "@/assets/therapist.jpg";
 
 const THERAPIST_NAME = "Maria Alice Andrade";
+const THERAPIST_TITLE = "Psicologia e Psicanálise Clínica";
 // Trocar pelo domínio do prospecto (ou pela URL da Vercel) — usado nas prévias de link.
 const SITE_URL = "https://modelo-psico-4.vercel.app/";
 // Recorte 1200x630 da foto de "Sobre mim" (public/og-image.jpg) usado nas prévias de link.
@@ -38,7 +39,7 @@ const OG_IMAGE_URL = `${SITE_URL}og-image.jpg`;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maria Alice Andrade · Psicanalista Clínica | Atendimento online" },
+      { title: "Maria Alice Andrade · Psicologia e Psicanálise Clínica | Atendimento online" },
       {
         name: "description",
         content:
@@ -46,7 +47,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Maria Alice Andrade · Psicanalista Clínica",
+        content: "Maria Alice Andrade · Psicologia e Psicanálise Clínica",
       },
       {
         property: "og:description",
@@ -55,14 +56,14 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:site_name", content: "Maria Alice Andrade · Psicanalista Clínica" },
+      { property: "og:site_name", content: "Maria Alice Andrade · Psicologia e Psicanálise Clínica" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: OG_IMAGE_URL },
       { property: "og:image:secure_url", content: OG_IMAGE_URL },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Maria Alice Andrade, psicanalista clínica" },
+      { property: "og:image:alt", content: "Maria Alice Andrade · Psicologia e Psicanálise Clínica" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE_URL },
     ],
@@ -245,12 +246,12 @@ function Index() {
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#inicio" className="flex items-center gap-2">
-            <Leaf className="h-5 w-5 text-primary" aria-hidden />
-            <span className="font-display text-lg leading-none">
-              {THERAPIST_NAME}
-              <span className="ml-2 text-xs tracking-widest text-muted-foreground">
-                PSICANALISTA CLÍNICA
+          <a href="#inicio" className="flex items-center gap-3">
+            <Monogram className="h-9 w-9" />
+            <span className="flex flex-col">
+              <span className="font-display text-xl leading-none">{THERAPIST_NAME}</span>
+              <span className="mt-1.5 text-[0.625rem] uppercase leading-none tracking-[0.2em] text-muted-foreground">
+                {THERAPIST_TITLE}
               </span>
             </span>
           </a>
@@ -329,7 +330,7 @@ function Index() {
           <div className="relative mx-auto w-full max-w-6xl px-5 py-20">
             <div className="max-w-2xl">
               <p className="eyebrow text-background/80">
-                Psicanalista clínica terapeuta
+                Psicóloga e psicanalista clínica
                 <br />
                 Atendimento Online
               </p>
@@ -360,7 +361,7 @@ function Index() {
             <div data-reveal className="relative">
               <img
                 src={therapistPhoto}
-                alt={`${THERAPIST_NAME}, psicanalista clínica, sentada em uma poltrona`}
+                alt={`${THERAPIST_NAME}, psicóloga e psicanalista clínica, sentada em uma poltrona`}
                 loading="lazy"
                 width={912}
                 height={1104}
@@ -375,8 +376,8 @@ function Index() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  Sou {THERAPIST_NAME}, psicanalista clínica dedicada a acompanhar pessoas no processo de
-                  autoconhecimento e elaboração do sofrimento psíquico.
+                  Sou {THERAPIST_NAME}, psicóloga e psicanalista clínica, dedicada a acompanhar pessoas
+                  no processo de autoconhecimento e elaboração do sofrimento psíquico.
                 </p>
                 <p>
                   A Psicanálise não busca apenas aliviar o sintoma, mas compreender o que ele diz
@@ -512,7 +513,7 @@ function Index() {
             data-reveal
             className="mx-auto max-w-6xl rounded-[2.5rem] bg-plum-deep px-8 py-16 text-center text-background"
           >
-            <ShieldCheck className="mx-auto h-8 w-8 text-background/80" aria-hidden />
+            <Monogram className="mx-auto block h-14 w-14 bg-gold" />
             <h2 className="mx-auto mt-6 max-w-2xl font-display text-3xl leading-tight text-background sm:text-4xl">
               O primeiro passo pode ser hoje, e ele é bem menor do que parece
             </h2>
@@ -536,12 +537,17 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="flex flex-col justify-between gap-8 md:flex-row">
             <div className="max-w-sm">
-              <div className="flex items-center gap-2">
-                <Leaf className="h-5 w-5 text-primary" aria-hidden />
-                <span className="font-display text-lg">{THERAPIST_NAME}</span>
+              <div className="flex items-center gap-3">
+                <Monogram className="h-9 w-9" />
+                <span className="flex flex-col">
+                  <span className="font-display text-xl leading-none">{THERAPIST_NAME}</span>
+                  <span className="mt-1.5 text-[0.625rem] uppercase leading-none tracking-[0.2em] text-muted-foreground">
+                    {THERAPIST_TITLE}
+                  </span>
+                </span>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Psicanalista clínica · Atendimento online para todo o Brasil.
+              <p className="mt-4 text-sm text-muted-foreground">
+                Atendimento online para todo o Brasil.
               </p>
               <div className="mt-5 flex gap-3">
                 <a
