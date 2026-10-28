@@ -29,7 +29,7 @@ import heroPoster from "@/assets/hero-poster.jpg";
 const heroVideoUrl = "/hero-loop.mp4";
 import therapistPhoto from "@/assets/therapist.jpg";
 
-const THERAPIST_NAME = "Alice";
+const THERAPIST_NAME = "Maria Alice Andrade";
 // Trocar pelo domínio do prospecto (ou pela URL da Vercel) — usado nas prévias de link.
 const SITE_URL = "https://modelo-psico-4.vercel.app/";
 // Recorte 1200x630 da foto de "Sobre mim" (public/og-image.jpg) usado nas prévias de link.
@@ -38,7 +38,7 @@ const OG_IMAGE_URL = `${SITE_URL}og-image.jpg`;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alice · Psicanalista Clínica | Atendimento online" },
+      { title: "Maria Alice Andrade · Psicanalista Clínica | Atendimento online" },
       {
         name: "description",
         content:
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Alice · Psicanalista Clínica",
+        content: "Maria Alice Andrade · Psicanalista Clínica",
       },
       {
         property: "og:description",
@@ -55,14 +55,14 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:site_name", content: "Alice · Psicanalista Clínica" },
+      { property: "og:site_name", content: "Maria Alice Andrade · Psicanalista Clínica" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: OG_IMAGE_URL },
       { property: "og:image:secure_url", content: OG_IMAGE_URL },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Alice, psicanalista clínica" },
+      { property: "og:image:alt", content: "Maria Alice Andrade, psicanalista clínica" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE_URL },
     ],
@@ -320,7 +320,7 @@ function Index() {
               <source src={heroVideoUrl} type="video/mp4" />
             </video>
           </div>
-          <div className="absolute inset-0 bg-sage-deep/55" aria-hidden />
+          <div className="absolute inset-0 bg-plum-deep/55" aria-hidden />
           <div
             className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
             aria-hidden
@@ -510,7 +510,7 @@ function Index() {
         <section className="px-5 pb-24">
           <div
             data-reveal
-            className="mx-auto max-w-6xl rounded-[2.5rem] bg-sage-deep px-8 py-16 text-center text-background"
+            className="mx-auto max-w-6xl rounded-[2.5rem] bg-plum-deep px-8 py-16 text-center text-background"
           >
             <ShieldCheck className="mx-auto h-8 w-8 text-background/80" aria-hidden />
             <h2 className="mx-auto mt-6 max-w-2xl font-display text-3xl leading-tight text-background sm:text-4xl">
@@ -545,7 +545,7 @@ function Index() {
               </p>
               <div className="mt-5 flex gap-3">
                 <a
-                  href="https://instagram.com/alice.psi"
+                  href="https://instagram.com/mariaaliceandrade.psi"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -554,7 +554,7 @@ function Index() {
                   <Instagram className="h-4 w-4" aria-hidden />
                 </a>
                 <a
-                  href="https://linkedin.com/in/alice-psi"
+                  href="https://linkedin.com/in/mariaaliceandrade-psi"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
