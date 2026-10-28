@@ -363,8 +363,8 @@ function Index() {
                 src={therapistPhoto}
                 alt={`${THERAPIST_NAME}, psicóloga e psicanalista clínica, sentada em uma poltrona`}
                 loading="lazy"
-                width={912}
-                height={1104}
+                width={901}
+                height={1352}
                 className="w-full rounded-[2rem] object-cover shadow-lift"
               />
             </div>
