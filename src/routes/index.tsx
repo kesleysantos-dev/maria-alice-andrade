@@ -321,7 +321,7 @@ function Index() {
               <source src={heroVideoUrl} type="video/mp4" />
             </video>
           </div>
-          <div className="absolute inset-0 bg-plum-deep/55" aria-hidden />
+          <div className="absolute inset-0 bg-plum-deep/45" aria-hidden />
           <div
             className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
             aria-hidden
