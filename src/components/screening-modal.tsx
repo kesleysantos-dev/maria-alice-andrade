@@ -105,16 +105,17 @@ export function ScreeningModal({
     const message = [
       "Olá! Gostaria de agendar um atendimento.",
       "",
-      `👤 *Nome:* ${answers.name.trim()}`,
-      `📱 *WhatsApp:* ${answers.phone}`,
-      `📌 *Atendimento:* ${answers.modality}`,
+      `*Nome:* ${answers.name.trim()}`,
+      `*Telefone:* ${answers.phone}`,
+      `*Atendimento:* ${answers.modality}`,
       "",
-      "💬 *O que me trouxe até aqui:*",
+      "*O que me trouxe até aqui:*",
       answers.reason.trim(),
     ].join("\n");
 
+    // Sem emojis: o redirecionamento do WhatsApp corrompe alguns deles em certos aparelhos ("?").
     window.open(
-      `https://wa.me/${THERAPIST_WHATSAPP}?text=${encodeURIComponent(message)}`,
+      `https://api.whatsapp.com/send?phone=${THERAPIST_WHATSAPP}&text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer",
     );
