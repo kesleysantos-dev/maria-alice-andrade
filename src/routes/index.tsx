@@ -345,7 +345,7 @@ function Index() {
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/85 sm:text-lg">
                 Atendimento humanizado e focado no seu bem-estar. Um espaço acolhedor para você
-                superar a ansiedade, organizar seus pensamentos e retomar o controle da sua vida.
+                superar a ansiedade, organizar seus pensamentos e retomar a orientação da sua vida.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button
