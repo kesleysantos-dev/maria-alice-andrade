@@ -143,7 +143,7 @@ const FAQ = [
   },
   {
     q: "Quanto tempo dura cada sessão e qual a frequência?",
-    a: "Cada encontro dura 50 minutos. A frequência inicial costuma ser semanal, o que ajuda a criar continuidade no processo. Depois, ajustamos juntos conforme o seu momento.",
+    a: "Cada encontro tem duração de até 50 minutos. A frequência inicial costuma ser semanal, o que ajuda a criar continuidade no processo. Depois, ajustamos juntos conforme o seu momento.",
   },
   {
     q: "Tudo o que eu falar é confidencial?",
@@ -159,7 +159,7 @@ const FAQ = [
   },
   {
     q: "Como funcionam valores e pagamento?",
-    a: "Os valores são informados no primeiro contato pelo WhatsApp, com possibilidade de horários sociais em vagas limitadas. O pagamento é feito por Pix ou cartão.",
+    a: "Os valores são informados no primeiro contato pelo WhatsApp, com possibilidade de horários sociais em vagas limitadas. O pagamento é feito exclusivamente por Pix, mediante envio do comprovante.",
   },
   {
     q: "O que acontece se eu não comparecer à consulta?",
