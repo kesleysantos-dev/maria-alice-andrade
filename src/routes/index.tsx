@@ -334,14 +334,15 @@ function Index() {
           />
 
           <div className="relative mx-auto w-full max-w-6xl px-5 py-20">
-            <div className="max-w-2xl">
+            <div className="max-w-4xl">
               <p className="eyebrow text-background/80">
                 Psicóloga e psicanalista clínica
                 <br />
                 Atendimento online e presencial
               </p>
               <h1 className="mt-5 font-display text-4xl leading-[1.1] text-background sm:text-6xl">
-                Um espaço seguro para você reencontrar seu equilíbrio emocional
+                Um espaço para dar lugar à sua palavra e compreender aquilo que se repete na sua
+                vida e te faz sofrer.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/85 sm:text-lg">
                 Atendimento humanizado e focado no seu bem-estar. Um espaço acolhedor para você
