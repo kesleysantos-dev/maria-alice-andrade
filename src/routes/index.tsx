@@ -329,7 +329,11 @@ function Index() {
           </div>
           <div className="absolute inset-0 bg-plum-deep/45" aria-hidden />
           <div
-            className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
+            className="absolute inset-x-0 -bottom-px h-48"
+            style={{
+              backgroundImage:
+                "linear-gradient(to top, var(--calm-top) 0%, var(--calm-top) 12%, transparent 100%)",
+            }}
             aria-hidden
           />
 
@@ -363,7 +367,10 @@ function Index() {
           </div>
         </section>
 
-        <section id="sobre" className="surface-calm overflow-x-clip py-24">
+        <section
+          id="sobre"
+          className="surface-calm relative -mt-3 overflow-x-clip pb-24 pt-[calc(6rem+0.75rem)]"
+        >
           <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 md:grid-cols-2">
             <div data-reveal className="relative">
               <img

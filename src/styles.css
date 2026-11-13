@@ -89,11 +89,8 @@
   --gold: oklch(0.75 0.085 65);
   --gold-foreground: oklch(0.42 0.07 345);
 
-  --gradient-calm: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--sand) 45%, var(--background)),
-    var(--background)
-  );
+  --calm-top: color-mix(in oklab, var(--sand) 45%, var(--background));
+  --gradient-calm: linear-gradient(180deg, var(--calm-top), var(--background));
   --gradient-plum: linear-gradient(135deg, var(--plum-deep), var(--plum));
   --shadow-soft: 0 18px 45px -28px color-mix(in oklab, var(--plum-deep) 55%, transparent);
   --shadow-lift: 0 28px 70px -35px color-mix(in oklab, var(--plum-deep) 70%, transparent);
